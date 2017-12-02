@@ -25,11 +25,23 @@ window.onload = function (){
 
 
 }
-function clickCount(element){
-  var counter = event.currentTarget;
-  counter.clicks = (element.clicks || 0) + 1;
-  console.log(counter.clicks)
+var clicks = 0;
+function clickCount() {
+  clicks += 1
+  console.log(clicks)
+  if (clicks === 11){
+    clicks = 0
   }
+}
+/*function clickCount(evt){
+  var counter = evt.currentTarget;
+  counter.clicks = (counter.clicks || 0) + 1;
+  if (counter.clicks >= 11){
+    clickCount()
+    return console.log('yes')
+  }
+  console.log(evt.clicks)
+}*/
 
 //    evt.target.classList.toggle('blue')
 //}
