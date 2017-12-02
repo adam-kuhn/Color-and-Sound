@@ -11,11 +11,16 @@ chooseColor()
 
 //drop down of colors to select
 function chooseColor(){
-  let chosenColor = document.getElementsByClassName("color-box")
+
+  $('.select').change(function(){
+    $(this).find('option:selected').css('background-color', 'red');
+  })
+
+  /*let chosenColor = document.getElementsByClassName("color-box")
   for (i = 0; i < chosenColor.length; i++){
     if (chosenColor[i] == "white")
     return "yes"
   }
-  console.log(chosenColor)
+  console.log(chosenColor)*/
 
 }
