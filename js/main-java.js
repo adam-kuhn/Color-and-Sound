@@ -12,5 +12,6 @@ document.getElementById("grid").addEventListener(click, chooseColor);
 
 //drop down of colors to select
 function chooseColor(){
+  document.getElementsByClassName("color-box")
 
 }
