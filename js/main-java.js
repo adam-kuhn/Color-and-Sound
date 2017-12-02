@@ -5,13 +5,17 @@
 //functions to be loaded on start up
 window.onload = function (){
 
-
-document.getElementById("grid").addEventListener(click, chooseColor);
+chooseColor()
 
 }
 
 //drop down of colors to select
 function chooseColor(){
-  document.getElementsByClassName("color-box")
+  let chosenColor = document.getElementsByClassName("color-box")
+  for (i = 0; i < chosenColor.length; i++){
+    if (chosenColor[i] == "white")
+    return "yes"
+  }
+  console.log(chosenColor)
 
 }
