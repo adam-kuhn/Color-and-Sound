@@ -3,32 +3,46 @@
 //play button will search for class then assign a sound 3-5 sec?
 
 //functions to be loaded on start up
-window.onload = function(){
-var colorBox = document.getElementsByClassName('colorBox')
 
-for (var i = 0; i < colorBox.length; i++) {
-  colorBox[i].addEventListener('click', makeBlue)
-}
-
-function makeBlue (evt) {
-  evt.target.style.backgroundColor = 'blue'
-}
-}
-/*window.onload = function (){
+window.onload = function (){
   var colorBox = document.getElementsByClassName('colorBox')
   for (var i = 0; i < colorBox.length; i ++){
-    colorBox[i].addEventListener('click', chooseColor(evt))
+    colorBox[i].addEventListener('click', clickCount)
+
   }
 
+/*  var colorBox = document.getElementsByClassName('colorBox')
+  for (var i = 0; i < colorBox.length; i ++){
+
+    colorBox[i].addEventListener('click', makeGreen)
+
+  }
+  var colorBox = document.getElementsByClassName('colorBox')
+  for (var i = 0; i < colorBox.length; i ++){
+
+    colorBox[i].addEventListener('click', makeYellow)
+  } */
 
 
 }
-let evt = "x"
-function chooseColor(evt){
+function clickCount(element){
+  var counter = event.currentTarget;
+  counter.clicks = (element.clicks || 0) + 1;
+  console.log(counter.clicks)
+  }
 
-    evt.target.style.backgroundColor = 'red'
+//    evt.target.classList.toggle('blue')
+//}
 
+/*function makeGreen(evt){
+
+    evt.target.classList.toggle('green')
 }
+
+function makeYellow(evt){
+
+    evt.target.classList.toggle('yellow')
+}*/
 //drop down of colors to select
 
 

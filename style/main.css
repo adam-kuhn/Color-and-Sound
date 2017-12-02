@@ -5,7 +5,7 @@
   color: white;
 }*/
 
-.green {
+.white {
   background-color: white;
   color: white;
 }
@@ -18,4 +18,9 @@
 .green {
   background-color: green;
   color: green;
+}
+
+.yellow {
+  background-color: yellow;
+  color: yellow;
 }
