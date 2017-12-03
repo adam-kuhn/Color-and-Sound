@@ -35,7 +35,7 @@ window.onload = function (){
     clicks = {};
 
 
-
+//count the number of clicks and play desired sound
 function click(e) {
   let blueSound = document.getElementsByTagName('audio')[0]
   let greenSound = document.getElementsByTagName('audio')[1]
@@ -85,7 +85,7 @@ function click(e) {
         purpleSound.play()
         dance()
       }
-
+//returns back to starting point after running through all colors
       else if (clicks[id] === 6){
           clicks[id] = -1
           e.target.classList.toggle('purple')
@@ -107,13 +107,48 @@ function playMe(){
   var yellowSound = document.getElementsByTagName('audio')[5]
 let allSound = []
 
-for (var i=0; i<3501; i+=250){
+//need to get the number of clicks on each button then play in sequence below
+
+//makes the character dance every 1/4 second for 4.5 seconds
+for (var i=0; i<4501; i+=250){
   setTimeout(danceMotion, i)
   function danceMotion(){
     dance()
   }
 }
 
+setTimeout(playFirst, 0)
+function playFirst(){
+  //get Element by ID, get the class, play Audio
+  
+  blueSound.play()
+}
+
+setTimeout(playGreen,500)
+function playGreen(){
+  greenSound.play()
+}
+
+setTimeout(playGrey, 1000)
+function playGrey(){
+  greySound.play()
+}
+
+setTimeout(playPurple, 1500)
+function playPurple(){
+  purpleSound.play()
+}
+
+setTimeout(playRed, 2000)
+function playRed(){
+  redSound.play()
+}
+setTimeout(playYellow, 2500)
+function playYellow(){
+  yellowSound.play()
+}
+
+//Test to show that time delay works
 setTimeout(playBlue, 0)
 function playBlue(){
   blueSound.play()
