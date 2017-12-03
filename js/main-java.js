@@ -107,7 +107,7 @@ let purpleSound = document.getElementsByTagName('audio')[3]
 let redSound = document.getElementsByTagName('audio')[4]
 let yellowSound = document.getElementsByTagName('audio')[5]
 //makes the character dance every 1/4 second for 4.5 seconds
-for (var i=0; i<4501; i+=250){
+for (var i=0; i<5001; i+=250){
   setTimeout(dance, i)
   }
 
@@ -119,22 +119,52 @@ for (var i=0; i<4501; i+=250){
 
 setTimeout(play1, 0)
 function play1(){
-  if (document.getElementById('box1').classList.contains('blue')){
-      blueSound.play()
-      console.log('is blue')
-    }
+  if (document.getElementById('box1').classList.contains('grey')){
+      greySound.play()
+      console.log('is grey')
+    } else if (document.getElementById('box1').classList.contains('blue')){
+        blueSound.play()
+        console.log('is blue')
+      } else if (document.getElementById('box1').classList.contains('green')){
+          greenSound.play()
+          console.log('is green')
+        } else if (document.getElementById('box1').classList.contains('yellow')){
+            yellowSound.play()
+            console.log('is yellow')
+          } else if (document.getElementById('box1').classList.contains('red')){
+              redSound.play()
+              console.log('is red')
+            } else if (document.getElementById('box1').classList.contains('purple')){
+                purpleSound.play()
+                console.log('is purple')
+              } else {
+                return
+              }
 }
-
-setTimeout(play2, 5000)
+//need a new sounds for blue, yellow, red
+setTimeout(play2, 3000)
 function play2(){
-  if (document.getElementById('box2').classList.contains('blue')){
-      blueSound.play()
-      console.log('is blue')
-    } else if (document.getElementById('box2').classList.contains('green')){
-        greenSound.play()
-        console.log('is green')
-
-    }
+  if (document.getElementById('box2').classList.contains('grey')){
+      greySound.play()
+      console.log('is grey')
+    } else if (document.getElementById('box2').classList.contains('blue')){
+        blueSound.play()
+        console.log('is blue')
+      } else if (document.getElementById('box2').classList.contains('green')){
+          greenSound.play()
+          console.log('is green')
+        } else if (document.getElementById('box2').classList.contains('yellow')){
+            yellowSound.play()
+            console.log('is yellow')
+          } else if (document.getElementById('box2').classList.contains('red')){
+              redSound.play()
+              console.log('is red')
+            } else if (document.getElementById('box2').classList.contains('purple')){
+                purpleSound.play()
+                console.log('is purple')
+              } else {
+                return
+              }
 }
 }
 
