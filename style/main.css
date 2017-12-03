@@ -5,22 +5,36 @@
   color: white;
 }*/
 
+.colorBox{
+  width: 126px;
+  height: 38px;
+  /*text-align: center;*/
+}
+.yellow {
+  background-color: yellow;
+  color: yellow;
+  text-indent: -9999px;
+}
 .white {
   background-color: white;
   color: white;
+  text-indent: -9999px;
 }
 
 .blue {
   background-color: blue;
   color: blue;
+  text-indent: -9999px;
 }
 
 .green {
   background-color: green;
   color: green;
+  text-indent: -9999px;
 }
 
 .yellow {
   background-color: yellow;
   color: yellow;
+  text-indent: -9999px;
 }
