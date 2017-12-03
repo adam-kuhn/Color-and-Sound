@@ -41,10 +41,10 @@ function click(e) {
 
 
   if (clicks[id] === 0){
-    e.target.classList.toggle('white')
+    e.target.classList.toggle('grey')
 
   } else if (clicks[id] === 1){
-    e.target.classList.toggle('white')
+    e.target.classList.toggle('grey')
     e.target.classList.toggle('blue')
 
   } else if (clicks[id] === 2){
@@ -56,9 +56,18 @@ function click(e) {
     e.target.classList.toggle('yellow')
 
   }  else if (clicks[id] === 4){
-      clicks[id] = -1
       e.target.classList.toggle('yellow')
+      e.target.classList.toggle('red')
     }
+    else if (clicks[id] === 5){
+        e.target.classList.toggle('red')
+        e.target.classList.toggle('purple')            
+      }
+
+      else if (clicks[id] === 6){
+          clicks[id] = -1
+          e.target.classList.toggle('purple')
+        }
 
   clicks[id]++;
   //e.target.textContent = clicks[id]
