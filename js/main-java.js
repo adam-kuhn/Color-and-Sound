@@ -95,35 +95,50 @@ function click(e) {
   clicks[id]++;
   //e.target.textContent = clicks[id]
 
-  console.log(clicks[id])
+  //console.log(clicks[id])
 }
 
 function playMe(){
-  var blueSound = document.getElementsByTagName('audio')[0]
-  var greenSound = document.getElementsByTagName('audio')[1]
-  var greySound = document.getElementsByTagName('audio')[2]
-  var purpleSound = document.getElementsByTagName('audio')[3]
-  var redSound = document.getElementsByTagName('audio')[4]
-  var yellowSound = document.getElementsByTagName('audio')[5]
-let allSound = []
-
 //need to get the number of clicks on each button then play in sequence below
-
+let blueSound = document.getElementsByTagName('audio')[0]
+let greenSound = document.getElementsByTagName('audio')[1]
+let greySound = document.getElementsByTagName('audio')[2]
+let purpleSound = document.getElementsByTagName('audio')[3]
+let redSound = document.getElementsByTagName('audio')[4]
+let yellowSound = document.getElementsByTagName('audio')[5]
 //makes the character dance every 1/4 second for 4.5 seconds
 for (var i=0; i<4501; i+=250){
   setTimeout(dance, i)
-   dance()
+  }
 
+//getSound()
+
+/*for (var j=0; j<3000; j+=500){
+  setTimeout(playSound, j)
+}*/
+
+setTimeout(play1, 0)
+function play1(){
+  if (document.getElementById('box1').classList.contains('blue')){
+      blueSound.play()
+      console.log('is blue')
+    }
 }
 
-setTimeout(playFirst, 0)
-function playFirst(){
-  //get Element by ID, get the class, play Audio
+setTimeout(play2, 5000)
+function play2(){
+  if (document.getElementById('box2').classList.contains('blue')){
+      blueSound.play()
+      console.log('is blue')
+    } else if (document.getElementById('box2').classList.contains('green')){
+        greenSound.play()
+        console.log('is green')
 
-  blueSound.play()
+    }
+}
 }
 
-setTimeout(playGreen,500)
+/*setTimeout(playGreen,500)
 function playGreen(){
   greenSound.play()
 }
@@ -146,8 +161,34 @@ setTimeout(playYellow, 2500)
 function playYellow(){
   yellowSound.play()
 }
+}*/
+
+
+/*function getSound(){
+
+
+
+    var blueSound = document.getElementsByTagName('audio')[0]
+    var greenSound = document.getElementsByTagName('audio')[1]
+    var greySound = document.getElementsByTagName('audio')[2]
+    var purpleSound = document.getElementsByTagName('audio')[3]
+    var redSound = document.getElementsByTagName('audio')[4]
+    var yellowSound = document.getElementsByTagName('audio')[5]
+
+//blueSound.play()
+    if (document.getElementById('box1').classList.contains('blue')){
+        blueSound.play()
+        console.log('is blue')
+    }
+    else if (document.getElementById('box5').classList.contains('blue')){
+      blueSound.play()
+      console.log('is blue')
+      }
+    }*/
+
 
 //Test to show that time delay works
+/*
 setTimeout(playBlue, 0)
 function playBlue(){
   blueSound.play()
@@ -181,7 +222,7 @@ function playYellow(){
 
   }
 
-
+*/
 //  mix.play()
 
   //blueSound.play()
