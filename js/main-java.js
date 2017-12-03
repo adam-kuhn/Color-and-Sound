@@ -114,34 +114,34 @@ for (var i=0; i<3501; i+=250){
   }
 }
 
-
-
 setTimeout(playBlue, 0)
 function playBlue(){
   blueSound.play()
-  dance()
 }
 
-
-
-
-//greenSound.play()
-setTimeout(playGreen,1000)
+setTimeout(playGreen,500)
 function playGreen(){
   greenSound.play()
-  dance()
 }
 
-
-
-
-//greySound.play()
-setTimeout(playGrey, 2000)
+setTimeout(playGrey, 1000)
 function playGrey(){
   greySound.play()
-  dance()
 }
 
+setTimeout(playPurple, 1500)
+function playPurple(){
+  purpleSound.play()
+}
+
+setTimeout(playRed, 2000)
+function playRed(){
+  redSound.play()
+}
+setTimeout(playYellow, 2500)
+function playYellow(){
+  yellowSound.play()
+}
 
 
 
