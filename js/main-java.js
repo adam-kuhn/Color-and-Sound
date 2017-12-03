@@ -38,12 +38,31 @@ function click(e) {
   if (!clicks[id]){
     clicks[id] = 0;
   }
-  else if (clicks[id] === 5){
-    clicks[id] = 0
-  }
+
+
+  if (clicks[id] === 0){
+    e.target.classList.toggle('white')
+
+  } else if (clicks[id] === 1){
+    e.target.classList.toggle('white')
+    e.target.classList.toggle('blue')
+
+  } else if (clicks[id] === 2){
+    e.target.classList.toggle('blue')
+    e.target.classList.toggle('green')
+
+  } else if (clicks[id] === 3){
+    e.target.classList.toggle('green')
+    e.target.classList.toggle('yellow')
+
+  }  else if (clicks[id] === 4){
+      clicks[id] = -1
+      e.target.classList.toggle('yellow')
+    }
 
   clicks[id]++;
-  e.target.textContent = clicks[id]
+  //e.target.textContent = clicks[id]
+
   console.log(clicks[id])
 }
 
