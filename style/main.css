@@ -9,45 +9,37 @@
   width: 126px;
   height: 38px;
 
-  /*text-align: center;*/
 }
 .yellow {
   background-color: yellow;
-  color: yellow;
   text-indent: -9999px;
 }
 .grey {
   background-color: grey;
-  color: grey;
   text-indent: -9999px;
 }
 
 .blue {
   background-color: blue;
-  color: blue;
   text-indent: -9999px;
 }
 
 .green {
   background-color: green;
-  color: green;
   text-indent: -9999px;
 }
 
 .yellow {
   background-color: yellow;
-  color: yellow;
   text-indent: -9999px;
 }
 
 .red {
   background-color: red;
-  color: red;
   text-indent: -9999px;
 }
 
 .purple {
   background-color: purple;
-  color: purple;
   text-indent: -9999px;
 }
