@@ -107,79 +107,43 @@ function playMe(){
   var yellowSound = document.getElementsByTagName('audio')[5]
 let allSound = []
 
+for (var i=0; i<3501; i+=250){
+  setTimeout(danceMotion, i)
+  function danceMotion(){
+    dance()
+  }
+}
+
+
 
 setTimeout(playBlue, 0)
 function playBlue(){
   blueSound.play()
   dance()
 }
-setTimeout(danceMotion, 250)
-function danceMotion(){
-  dance()
-}
 
-setTimeout(danceMotion, 500)
-function danceMotion(){
-  dance()
-}
-setTimeout(danceMotion, 750)
-function danceMotion(){
-  dance()
-}
+
+
+
 //greenSound.play()
 setTimeout(playGreen,1000)
 function playGreen(){
   greenSound.play()
   dance()
 }
-setTimeout(danceMotion, 1250)
-function danceMotion(){
-  dance()
-}
-setTimeout(danceMotion, 1500)
-function danceMotion(){
-  dance()
-}
 
-setTimeout(danceMotion, 1750)
-function danceMotion(){
-  dance()
-}
+
+
+
 //greySound.play()
 setTimeout(playGrey, 2000)
 function playGrey(){
   greySound.play()
   dance()
 }
-setTimeout(danceMotion, 2250)
-function danceMotion(){
-  dance()
-}
-setTimeout(danceMotion, 2500)
-function danceMotion(){
-  dance()
-}
-setTimeout(danceMotion, 2750)
-function danceMotion(){
-  dance()
-}
 
-setTimeout(danceMotion, 3000)
-function danceMotion(){
-  dance()
-}
-setTimeout(danceMotion, 3250)
-function danceMotion(){
-  dance()
-}
-setTimeout(danceMotion, 3500)
-function danceMotion(){
-  dance()
-}
-//purpleSound.play()
-//setTimeout(purpleSound.play(), 10000)
-//setTimeout(redSound.play(), 9000)
-  //let allSound = blueSound + greenSound + greySound + purpleSound + redSound + yellowSound
+
+
 
   }
 
