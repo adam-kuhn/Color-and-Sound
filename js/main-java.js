@@ -111,16 +111,15 @@ let allSound = []
 
 //makes the character dance every 1/4 second for 4.5 seconds
 for (var i=0; i<4501; i+=250){
-  setTimeout(danceMotion, i)
-  function danceMotion(){
-    dance()
-  }
+  setTimeout(dance, i)
+   dance()
+
 }
 
 setTimeout(playFirst, 0)
 function playFirst(){
   //get Element by ID, get the class, play Audio
-  
+
   blueSound.play()
 }
 
