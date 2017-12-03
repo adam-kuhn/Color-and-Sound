@@ -113,7 +113,16 @@ function playBlue(){
   blueSound.play()
   dance()
 }
+setTimeout(danceMotion, 250)
+function danceMotion(){
+  dance()
+}
+
 setTimeout(danceMotion, 500)
+function danceMotion(){
+  dance()
+}
+setTimeout(danceMotion, 750)
 function danceMotion(){
   dance()
 }
@@ -123,7 +132,16 @@ function playGreen(){
   greenSound.play()
   dance()
 }
+setTimeout(danceMotion, 1250)
+function danceMotion(){
+  dance()
+}
 setTimeout(danceMotion, 1500)
+function danceMotion(){
+  dance()
+}
+
+setTimeout(danceMotion, 1750)
 function danceMotion(){
   dance()
 }
@@ -133,7 +151,28 @@ function playGrey(){
   greySound.play()
   dance()
 }
+setTimeout(danceMotion, 2250)
+function danceMotion(){
+  dance()
+}
 setTimeout(danceMotion, 2500)
+function danceMotion(){
+  dance()
+}
+setTimeout(danceMotion, 2750)
+function danceMotion(){
+  dance()
+}
+
+setTimeout(danceMotion, 3000)
+function danceMotion(){
+  dance()
+}
+setTimeout(danceMotion, 3250)
+function danceMotion(){
+  dance()
+}
+setTimeout(danceMotion, 3500)
 function danceMotion(){
   dance()
 }
