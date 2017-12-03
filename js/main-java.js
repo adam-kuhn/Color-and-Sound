@@ -14,6 +14,7 @@ window.onload = function (){
     document.getElementById("box3").addEventListener('click', click)*/
 
   }
+  document.getElementById("play").addEventListener('click', playMe)
 }
 
 /*  var colorBox = document.getElementsByClassName('colorBox')
@@ -33,7 +34,16 @@ window.onload = function (){
     box3 = document.getElementById("box3"),*/
     clicks = {};
 
+
+
 function click(e) {
+  let blueSound = document.getElementsByTagName('audio')[0]
+  let greenSound = document.getElementsByTagName('audio')[1]
+  let greySound = document.getElementsByTagName('audio')[2]
+  let purpleSound = document.getElementsByTagName('audio')[3]
+  let redSound = document.getElementsByTagName('audio')[4]
+  let yellowSound = document.getElementsByTagName('audio')[5]
+
   var id = e.target.id;
   if (!clicks[id]){
     clicks[id] = 0;
@@ -42,37 +52,117 @@ function click(e) {
 
   if (clicks[id] === 0){
     e.target.classList.toggle('grey')
+    greySound.play()
+    dance()
 
   } else if (clicks[id] === 1){
     e.target.classList.toggle('grey')
     e.target.classList.toggle('blue')
+    blueSound.play()
+    dance()
 
   } else if (clicks[id] === 2){
     e.target.classList.toggle('blue')
     e.target.classList.toggle('green')
+    greenSound.play()
+    dance()
 
   } else if (clicks[id] === 3){
     e.target.classList.toggle('green')
     e.target.classList.toggle('yellow')
+    yellowSound.play()
+    dance()
 
   }  else if (clicks[id] === 4){
       e.target.classList.toggle('yellow')
       e.target.classList.toggle('red')
+      redSound.play()
+      dance()
     }
     else if (clicks[id] === 5){
         e.target.classList.toggle('red')
-        e.target.classList.toggle('purple')            
+        e.target.classList.toggle('purple')
+        purpleSound.play()
+        dance()
       }
 
       else if (clicks[id] === 6){
           clicks[id] = -1
           e.target.classList.toggle('purple')
+          dance()
         }
 
   clicks[id]++;
   //e.target.textContent = clicks[id]
 
   console.log(clicks[id])
+}
+
+function playMe(){
+  var blueSound = document.getElementsByTagName('audio')[0]
+  var greenSound = document.getElementsByTagName('audio')[1]
+  var greySound = document.getElementsByTagName('audio')[2]
+  var purpleSound = document.getElementsByTagName('audio')[3]
+  var redSound = document.getElementsByTagName('audio')[4]
+  var yellowSound = document.getElementsByTagName('audio')[5]
+let allSound = []
+
+
+setTimeout(playBlue, 0)
+function playBlue(){
+  blueSound.play()
+  dance()
+}
+setTimeout(danceMotion, 500)
+function danceMotion(){
+  dance()
+}
+//greenSound.play()
+setTimeout(playGreen,1000)
+function playGreen(){
+  greenSound.play()
+  dance()
+}
+setTimeout(danceMotion, 1500)
+function danceMotion(){
+  dance()
+}
+//greySound.play()
+setTimeout(playGrey, 2000)
+function playGrey(){
+  greySound.play()
+  dance()
+}
+setTimeout(danceMotion, 2500)
+function danceMotion(){
+  dance()
+}
+//purpleSound.play()
+//setTimeout(purpleSound.play(), 10000)
+//setTimeout(redSound.play(), 9000)
+  //let allSound = blueSound + greenSound + greySound + purpleSound + redSound + yellowSound
+
+  }
+
+
+//  mix.play()
+
+  //blueSound.play()
+//  greenSound.play()
+//  greySound.play()
+//  purpleSound.play()
+//  redSound.play()
+  //yellowSound.play()
+
+
+
+function dance(e){
+  let invis = document.getElementById('invis')
+  let show = document.getElementById('show')
+  invis.classList.toggle('invis')
+  show.classList.toggle('invis')
+
+
 }
 
 

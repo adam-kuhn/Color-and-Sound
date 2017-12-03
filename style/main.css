@@ -40,3 +40,7 @@
   background-color: purple;
   text-indent: -9999px;
 }
+
+.invis {
+  display: none
+}
