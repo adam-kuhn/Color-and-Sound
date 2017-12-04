@@ -3,9 +3,10 @@
 //play button will search for class then assign a sound 3-5 sec?
 
 //functions to be loaded on start up
+  var colorBox = document.getElementsByClassName('colorBox')
 
 window.onload = function (){
-  var colorBox = document.getElementsByClassName('colorBox')
+
   for (var i = 0; i < colorBox.length; i ++){
     colorBox[i].addEventListener('click', click)
 
@@ -111,13 +112,17 @@ for (var i=0; i<5001; i+=250){
   setTimeout(dance, i)
   }
 
-//getSound()
+  /*for (var j=0; j<17701; j+=2950){
+    setTimeout(getSound, i)
+  }*/
+getSound()
+}
 
 /*for (var j=0; j<3000; j+=500){
   setTimeout(playSound, j)
 }*/
 
-setTimeout(play1, 0)
+/*setTimeout(play1, 0)
 function play1(){
   if (document.getElementById('box1').classList.contains('grey')){
       greySound.play()
@@ -166,7 +171,86 @@ function play2(){
                 return
               }
 }
+}*/
+
+
+let j = 1;
+
+function getSound(){
+
+  setTimeout (playSound, 2950)
 }
+
+function playSound() {
+  let blueSound = document.getElementsByTagName('audio')[0]
+  let greenSound = document.getElementsByTagName('audio')[1]
+  let greySound = document.getElementsByTagName('audio')[2]
+  let purpleSound = document.getElementsByTagName('audio')[3]
+  let redSound = document.getElementsByTagName('audio')[4]
+  let yellowSound = document.getElementsByTagName('audio')[5]
+  let id = 'box' + j
+  if(document.getElementById(id).classList.contains('grey')){
+    greySound.play()
+    if (j < 7){
+      j++
+      getSound()
+    }
+
+  } else if (document.getElementById(id).classList.contains('blue')){
+    blueSound.play()
+    if (j < 7){
+      j++
+      getSound()
+    }
+  } else {
+    if (j < 7){
+      j++
+      getSound()
+    }
+  }
+
+
+}
+
+/*
+var counter = 1
+function getSound(){
+  let blueSound = document.getElementsByTagName('audio')[0]
+  let greenSound = document.getElementsByTagName('audio')[1]
+  let greySound = document.getElementsByTagName('audio')[2]
+  let purpleSound = document.getElementsByTagName('audio')[3]
+  let redSound = document.getElementsByTagName('audio')[4]
+  let yellowSound = document.getElementsByTagName('audio')[5]
+let chosenColor = document.getElementsByClassName('colorBox')
+
+setTimeout(playSound, 2950)
+for (var j = 0; j < 6; j++){
+  boxNumber = j+1
+  let id = 'box' + boxNumber;
+  setTimeout(doNothing, j*5950)
+  if(document.getElementById(id).classList.contains('grey')){
+    greySound.play()
+    //setTimeout(doNothing, 9999)
+
+  } else if (document.getElementById(id).classList.contains('blue')){
+    blueSound.play()
+    //setTimeout(doNothing, 9999)
+
+  } else{
+    return
+  }
+
+}
+}*/
+
+function doNothing(){
+  //does nothing, used to delay the sound in getSound
+}
+
+
+
+
+
 
 /*setTimeout(playGreen,500)
 function playGreen(){
@@ -269,8 +353,6 @@ function dance(e){
   let show = document.getElementById('show')
   invis.classList.toggle('invis')
   show.classList.toggle('invis')
-
-
 }
 
 
