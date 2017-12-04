@@ -96,13 +96,14 @@ getSound()
 }
 
 
-
-let j = 1;
+let j = 0;
 function getSound(){
   setTimeout (playSound, 2950)
 }
 
 function playSound() {
+  j++
+
   let blueSound = document.getElementsByTagName('audio')[0]
   let greenSound = document.getElementsByTagName('audio')[1]
   let greySound = document.getElementsByTagName('audio')[2]
@@ -110,162 +111,49 @@ function playSound() {
   let redSound = document.getElementsByTagName('audio')[4]
   let yellowSound = document.getElementsByTagName('audio')[5]
   let id = 'box' + j
+
   if(document.getElementById(id).classList.contains('grey')){
     greySound.play()
-    if (j < 7){
-      j++
-      getSound()
-    }
-
-  } else if (document.getElementById(id).classList.contains('blue')){
-    blueSound.play()
-    if (j < 7){
-      j++
-      getSound()
-    }
-  } else {
-    if (j < 7){
-      j++
+    if (j < 6){
       getSound()
     }
   }
-
-
-}
-
-/*
-var counter = 1
-function getSound(){
-  let blueSound = document.getElementsByTagName('audio')[0]
-  let greenSound = document.getElementsByTagName('audio')[1]
-  let greySound = document.getElementsByTagName('audio')[2]
-  let purpleSound = document.getElementsByTagName('audio')[3]
-  let redSound = document.getElementsByTagName('audio')[4]
-  let yellowSound = document.getElementsByTagName('audio')[5]
-let chosenColor = document.getElementsByClassName('colorBox')
-
-setTimeout(playSound, 2950)
-for (var j = 0; j < 6; j++){
-  boxNumber = j+1
-  let id = 'box' + boxNumber;
-  setTimeout(doNothing, j*5950)
-  if(document.getElementById(id).classList.contains('grey')){
-    greySound.play()
-    //setTimeout(doNothing, 9999)
-
-  } else if (document.getElementById(id).classList.contains('blue')){
+  else if (document.getElementById(id).classList.contains('blue')){
     blueSound.play()
-    //setTimeout(doNothing, 9999)
-
-  } else{
-    return
-  }
-
-}
-}*/
-
-function doNothing(){
-  //does nothing, used to delay the sound in getSound
-}
-
-
-
-
-
-
-/*setTimeout(playGreen,500)
-function playGreen(){
-  greenSound.play()
-}
-
-setTimeout(playGrey, 1000)
-function playGrey(){
-  greySound.play()
-}
-
-setTimeout(playPurple, 1500)
-function playPurple(){
-  purpleSound.play()
-}
-
-setTimeout(playRed, 2000)
-function playRed(){
-  redSound.play()
-}
-setTimeout(playYellow, 2500)
-function playYellow(){
-  yellowSound.play()
-}
-}*/
-
-
-/*function getSound(){
-
-
-
-    var blueSound = document.getElementsByTagName('audio')[0]
-    var greenSound = document.getElementsByTagName('audio')[1]
-    var greySound = document.getElementsByTagName('audio')[2]
-    var purpleSound = document.getElementsByTagName('audio')[3]
-    var redSound = document.getElementsByTagName('audio')[4]
-    var yellowSound = document.getElementsByTagName('audio')[5]
-
-//blueSound.play()
-    if (document.getElementById('box1').classList.contains('blue')){
-        blueSound.play()
-        console.log('is blue')
+    if (j < 6){
+      getSound()
     }
-    else if (document.getElementById('box5').classList.contains('blue')){
-      blueSound.play()
-      console.log('is blue')
+  }
+  else if (document.getElementById(id).classList.contains('green')){
+      greenSound.play()
+      if (j < 6){
+        getSound()
       }
-    }*/
-
-
-//Test to show that time delay works
-/*
-setTimeout(playBlue, 0)
-function playBlue(){
-  blueSound.play()
-}
-
-setTimeout(playGreen,500)
-function playGreen(){
-  greenSound.play()
-}
-
-setTimeout(playGrey, 1000)
-function playGrey(){
-  greySound.play()
-}
-
-setTimeout(playPurple, 1500)
-function playPurple(){
-  purpleSound.play()
-}
-
-setTimeout(playRed, 2000)
-function playRed(){
-  redSound.play()
-}
-setTimeout(playYellow, 2500)
-function playYellow(){
-  yellowSound.play()
-}
-
-
-
   }
+  else if (document.getElementById(id).classList.contains('purple')){
+   purpleSound.play()
+    if (j < 6){
+      getSound()
+    }
+  }
+    else if (document.getElementById(id).classList.contains('yellow')){
+      yellowSound.play()
+      if (j < 6){
+        getSound()
+      }
+    }
+    else if (document.getElementById(id).classList.contains('red')){
+        redSound.play()
+        if (j < 6){
+          getSound()
+        }
+      } else {
+    if (j < 6){
+      getSound()
+    }
+  }
+}
 
-*/
-//  mix.play()
-
-  //blueSound.play()
-//  greenSound.play()
-//  greySound.play()
-//  purpleSound.play()
-//  redSound.play()
-  //yellowSound.play()
 
 
 
@@ -275,135 +163,3 @@ function dance(e){
   invis.classList.toggle('invis')
   show.classList.toggle('invis')
 }
-
-
-
-
-
-
-
-/*  let clicks = 0;
-function changeColor(evt){
-
-  clicks += 1
-
-  switch(clicks) {
-    case 1:
-    evt.target.classList.toggle('white');
-    break;
-
-    case 2:
-    evt.target.classList.toggle('white');
-    evt.target.classList.toggle('blue');
-    break;
-
-    case 3:
-    evt.target.classList.toggle('blue');
-    evt.target.classList.toggle('green');
-    break;
-
-    case 4:
-    evt.target.classList.toggle('green');
-    evt.target.classList.toggle('yellow');
-    break;
-
-    case 5:
-    clicks = 0;
-    evt.target.classList.toggle('yellow')
-
-
-
-  }
-  console.log(clicks)
-}
-
-function changeColor2(evt){
-  //let clicks = 0;
-  clicks += 1
-
-  switch(clicks) {
-    case 1:
-    evt.target.classList.toggle('white');
-    break;
-
-    case 2:
-    evt.target.classList.toggle('white');
-    evt.target.classList.toggle('blue');
-    break;
-
-    case 3:
-    evt.target.classList.toggle('blue');
-    evt.target.classList.toggle('green');
-    break;
-
-    case 4:
-    evt.target.classList.toggle('green');
-    evt.target.classList.toggle('yellow');
-    break;
-
-    case 5:
-    clicks = 0;
-    evt.target.classList.toggle('yellow')
-
-
-
-  }
-  console.log(clicks)
-}
-/* using if then
-  if (clicks === 5){
-  clicks = 0
-  evt.target.classList.toggle('yellow')
-  }
-  if (clicks === 1){
-    //evt.target.classList.toggle('yellow')
-    evt.target.classList.toggle('white')
-  } else if (clicks === 2){
-    evt.target.classList.toggle('white')
-    evt.target.classList.toggle('blue')
-  } else if (clicks === 3){
-    evt.target.classList.toggle('blue')
-    evt.target.classList.toggle('green')
-  } else if (clicks === 4){
-    evt.target.classList.toggle('green')
-    evt.target.classList.toggle('yellow')
-  }
-} /*
-
-/*function clickCount(evt){
-  var counter = evt.currentTarget;
-  counter.clicks = (counter.clicks || 0) + 1;
-  if (counter.clicks >= 11){
-    clickCount()
-    return console.log('yes')
-  }
-  console.log(evt.clicks)
-}*/
-
-//    evt.target.classList.toggle('blue')
-//}
-
-/*function makeGreen(evt){
-
-    evt.target.classList.toggle('green')
-}
-
-function makeYellow(evt){
-
-    evt.target.classList.toggle('yellow')
-}*/
-//drop down of colors to select
-
-
-/*function chooseColor(evt){
-evt.target.classList.toggle('blue')
-
-
-  /*let chosenColor = document.getElementsByClassName("colorBox")
-  for (i = 0; i < chosenColor.length; i++){
-    if (chosenColor[i] == "white")
-    return "yes"
-  }
-  console.log(chosenColor)*/
-
-//}
