@@ -18,21 +18,7 @@ window.onload = function (){
   document.getElementById("play").addEventListener('click', playMe)
 }
 
-/*  var colorBox = document.getElementsByClassName('colorBox')
-  for (var i = 0; i < colorBox.length; i ++){
 
-    colorBox[i].addEventListener('click', makeGreen)
-
-  }
-  var colorBox = document.getElementsByClassName('colorBox')
-  for (var i = 0; i < colorBox.length; i ++){
-
-    colorBox[i].addEventListener('click', makeYellow)
-  } */
-
-/*var box1 = document.getElementById("box1"),
-    box2 = document.getElementById("box2"),
-    box3 = document.getElementById("box3"),*/
     clicks = {};
 
 
@@ -100,84 +86,19 @@ function click(e) {
 }
 
 function playMe(){
-//need to get the number of clicks on each button then play in sequence below
-let blueSound = document.getElementsByTagName('audio')[0]
-let greenSound = document.getElementsByTagName('audio')[1]
-let greySound = document.getElementsByTagName('audio')[2]
-let purpleSound = document.getElementsByTagName('audio')[3]
-let redSound = document.getElementsByTagName('audio')[4]
-let yellowSound = document.getElementsByTagName('audio')[5]
+
 //makes the character dance every 1/4 second for 4.5 seconds
-for (var i=0; i<5001; i+=250){
+for (var i=0; i<24000; i+=250){
   setTimeout(dance, i)
   }
 
-  /*for (var j=0; j<17701; j+=2950){
-    setTimeout(getSound, i)
-  }*/
 getSound()
 }
 
-/*for (var j=0; j<3000; j+=500){
-  setTimeout(playSound, j)
-}*/
-
-/*setTimeout(play1, 0)
-function play1(){
-  if (document.getElementById('box1').classList.contains('grey')){
-      greySound.play()
-      console.log('is grey')
-    } else if (document.getElementById('box1').classList.contains('blue')){
-        blueSound.play()
-        console.log('is blue')
-      } else if (document.getElementById('box1').classList.contains('green')){
-          greenSound.play()
-          console.log('is green')
-        } else if (document.getElementById('box1').classList.contains('yellow')){
-            yellowSound.play()
-            console.log('is yellow')
-          } else if (document.getElementById('box1').classList.contains('red')){
-              redSound.play()
-              console.log('is red')
-            } else if (document.getElementById('box1').classList.contains('purple')){
-                purpleSound.play()
-                console.log('is purple')
-              } else {
-                return
-              }
-}
-//need a new sounds for blue, yellow, red
-setTimeout(play2, 2950)
-function play2(){
-  if (document.getElementById('box2').classList.contains('grey')){
-      greySound.play()
-      console.log('is grey')
-    } else if (document.getElementById('box2').classList.contains('blue')){
-        blueSound.play()
-        console.log('is blue')
-      } else if (document.getElementById('box2').classList.contains('green')){
-          greenSound.play()
-          console.log('is green')
-        } else if (document.getElementById('box2').classList.contains('yellow')){
-            yellowSound.play()
-            console.log('is yellow')
-          } else if (document.getElementById('box2').classList.contains('red')){
-              redSound.play()
-              console.log('is red')
-            } else if (document.getElementById('box2').classList.contains('purple')){
-                purpleSound.play()
-                console.log('is purple')
-              } else {
-                return
-              }
-}
-}*/
 
 
 let j = 1;
-
 function getSound(){
-
   setTimeout (playSound, 2950)
 }
 
