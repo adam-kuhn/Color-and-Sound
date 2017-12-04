@@ -1,6 +1,4 @@
-//get element by Class then change color based on selection
-//display no text when selected, only the color
-//play button will search for class then assign a sound 3-5 sec?
+
 
 //functions to be loaded on start up
   var colorBox = document.getElementsByClassName('colorBox')
@@ -96,14 +94,14 @@ getSound()
 }
 
 
-let j = 0;
+
 function getSound(){
   setTimeout (playSound, 2950)
 }
-
+let j = 0;
 function playSound() {
-  j++
-
+j++
+console.log(j)
   let blueSound = document.getElementsByTagName('audio')[0]
   let greenSound = document.getElementsByTagName('audio')[1]
   let greySound = document.getElementsByTagName('audio')[2]
@@ -112,46 +110,58 @@ function playSound() {
   let yellowSound = document.getElementsByTagName('audio')[5]
   let id = 'box' + j
 
-  if(document.getElementById(id).classList.contains('grey')){
+
+  if (j >= 7){
+   j=0
+   getSound()
+ }
+
+
+else if(document.getElementById(id).classList.contains('grey')){
     greySound.play()
+    //document.getElementById(id).classList.toggle('grey')
     if (j < 6){
       getSound()
     }
   }
   else if (document.getElementById(id).classList.contains('blue')){
     blueSound.play()
+  //  document.getElementById(id).classList.toggle('blue')
     if (j < 6){
       getSound()
     }
   }
   else if (document.getElementById(id).classList.contains('green')){
       greenSound.play()
+      //document.getElementById(id).classList.toggle('green')
       if (j < 6){
         getSound()
       }
   }
   else if (document.getElementById(id).classList.contains('purple')){
    purpleSound.play()
+   //document.getElementById(id).classList.toggle('purple')
     if (j < 6){
       getSound()
     }
   }
     else if (document.getElementById(id).classList.contains('yellow')){
       yellowSound.play()
+      //document.getElementById(id).classList.toggle('yellow')
       if (j < 6){
         getSound()
       }
     }
     else if (document.getElementById(id).classList.contains('red')){
         redSound.play()
+        //document.getElementById(id).classList.toggle('red')
         if (j < 6){
           getSound()
         }
-      } else {
-    if (j < 6){
+      } else if (j < 6){
       getSound()
     }
-  }
+
 }
 
 
