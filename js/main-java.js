@@ -142,7 +142,7 @@ function play1(){
               }
 }
 //need a new sounds for blue, yellow, red
-setTimeout(play2, 3000)
+setTimeout(play2, 2950)
 function play2(){
   if (document.getElementById('box2').classList.contains('grey')){
       greySound.play()
