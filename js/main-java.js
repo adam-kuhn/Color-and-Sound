@@ -1,27 +1,19 @@
 
-
-//functions to be loaded on start up
-  var colorBox = document.getElementsByClassName('colorBox')
+var colorBox = document.getElementsByClassName('colorBox')
 
 window.onload = function (){
-
+  //add event listeners
   for (var i = 0; i < colorBox.length; i ++){
     colorBox[i].addEventListener('click', click)
-
-    /*document.getElementById("box1").addEventListener('click', click)
-    document.getElementById("box2").addEventListener('click', click)
-    document.getElementById("box3").addEventListener('click', click)*/
-
   }
   document.getElementById("play").addEventListener('click', playMe)
 }
 
+//count the number of clicks and play desired sound, when selected
 
-    clicks = {};
-
-
-//count the number of clicks and play desired sound
+clicks = {};
 function click(e) {
+  //gets audio file from HTML
   let blueSound = document.getElementsByTagName('audio')[0]
   let greenSound = document.getElementsByTagName('audio')[1]
   let greySound = document.getElementsByTagName('audio')[2]
@@ -33,8 +25,7 @@ function click(e) {
   if (!clicks[id]){
     clicks[id] = 0;
   }
-
-
+//colors toggle on and off in order as the button is clicked
   if (clicks[id] === 0){
     e.target.classList.toggle('grey')
     greySound.play()
@@ -78,26 +69,23 @@ function click(e) {
         }
 
   clicks[id]++;
-  //e.target.textContent = clicks[id]
-
-  //console.log(clicks[id])
 }
-
+//when play button is clicked
 function playMe(){
 
-//makes the character dance every 1/4 second for 4.5 seconds
+//makes the character dance every 1/4 second for 24 seconds
 for (var i=0; i<24000; i+=250){
-  setTimeout(dance, i)
+  setTimeout(dance, i) //timeout used to delay the switch of the image
   }
-
 getSound()
 }
 
 
 
 function getSound(){
-  setTimeout (playSound, 2950)
+  setTimeout (playSound, 2950) //allows for sounds to not overlap and play after one another
 }
+//have to make a psuedo loop because setTimout() does not block functionalitly, only delays the current thread. i.e. doesn't work in a for loop
 let j = 0;
 function playSound() {
 j++
@@ -108,65 +96,55 @@ console.log(j)
   let purpleSound = document.getElementsByTagName('audio')[3]
   let redSound = document.getElementsByTagName('audio')[4]
   let yellowSound = document.getElementsByTagName('audio')[5]
+  //this will allow us to determin the element ID (which box has what color)
   let id = 'box' + j
-
 
   if (j >= 7){
    j=0
    getSound()
  }
-
-
+//play desired sounds for the color in each box
 else if(document.getElementById(id).classList.contains('grey')){
     greySound.play()
-    //document.getElementById(id).classList.toggle('grey')
     if (j < 6){
       getSound()
     }
   }
   else if (document.getElementById(id).classList.contains('blue')){
     blueSound.play()
-  //  document.getElementById(id).classList.toggle('blue')
     if (j < 6){
       getSound()
     }
   }
   else if (document.getElementById(id).classList.contains('green')){
       greenSound.play()
-      //document.getElementById(id).classList.toggle('green')
       if (j < 6){
         getSound()
       }
   }
   else if (document.getElementById(id).classList.contains('purple')){
    purpleSound.play()
-   //document.getElementById(id).classList.toggle('purple')
     if (j < 6){
       getSound()
     }
   }
     else if (document.getElementById(id).classList.contains('yellow')){
       yellowSound.play()
-      //document.getElementById(id).classList.toggle('yellow')
       if (j < 6){
         getSound()
       }
     }
     else if (document.getElementById(id).classList.contains('red')){
         redSound.play()
-        //document.getElementById(id).classList.toggle('red')
         if (j < 6){
           getSound()
         }
       } else if (j < 6){
       getSound()
     }
-
 }
 
-
-
-
+//make the image dance
 function dance(e){
   let invis = document.getElementById('invis')
   let show = document.getElementById('show')
