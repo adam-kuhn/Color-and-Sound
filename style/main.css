@@ -12,32 +12,32 @@
 }
 
 .grey {
-  background-color: grey;
+  background-color: #6b6868;
   text-indent: -9999px;
 }
 
 .blue {
-  background-color: blue;
+  background-color: #3e3effdb;
   text-indent: -9999px;
 }
 
 .green {
-  background-color: green;
+  background-color: #43c743;
   text-indent: -9999px;
 }
 
 .yellow {
-  background-color: yellow;
+  background-color: #f1f13a;
   text-indent: -9999px;
 }
 
 .red {
-  background-color: red;
+  background-color: #e21313;
   text-indent: -9999px;
 }
 
 .purple {
-  background-color: purple;
+  background-color: #d00dd0;
   text-indent: -9999px;
 }
 

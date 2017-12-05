@@ -108,54 +108,62 @@ console.log(j)
 //play desired sounds for the color in each box
 else if(document.getElementById(id).classList.contains('grey')){
     greySound.play()
-    document.getElementById(id).classList.toggle('glow1') //turn on glow
-    document.getElementById(id).classList.toggle('glow2') //turn on glow
+
+    //switch which glow is showing
+    document.getElementById(id).classList.toggle('glow1')
+    document.getElementById(id).classList.toggle('glow2') //
     if (j < 6){
       getSound()
     }
   }
   else if (document.getElementById(id).classList.contains('blue')){
     blueSound.play()
-    document.getElementById(id).classList.toggle('glow1') //turn on glow
-    document.getElementById(id).classList.toggle('glow2') //turn on glow
+    //switch which glow is showing
+    document.getElementById(id).classList.toggle('glow1')
+    document.getElementById(id).classList.toggle('glow2')
     if (j < 6){
       getSound()
     }
   }
   else if (document.getElementById(id).classList.contains('green')){
       greenSound.play()
-      document.getElementById(id).classList.toggle('glow1') //turn on glow
-      document.getElementById(id).classList.toggle('glow2') //turn on glow
+      //switch which glow is showing
+      document.getElementById(id).classList.toggle('glow1')
+      document.getElementById(id).classList.toggle('glow2')
       if (j < 6){
         getSound()
       }
   }
   else if (document.getElementById(id).classList.contains('purple')){
    purpleSound.play()
-   document.getElementById(id).classList.toggle('glow1') //turn on glow
-   document.getElementById(id).classList.toggle('glow2') //turn on glow
+   //switch which glow is showing
+   document.getElementById(id).classList.toggle('glow1')
+   document.getElementById(id).classList.toggle('glow2')
     if (j < 6){
       getSound()
     }
   }
     else if (document.getElementById(id).classList.contains('yellow')){
       yellowSound.play()
-      document.getElementById(id).classList.toggle('glow1') //turn on glow
-      document.getElementById(id).classList.toggle('glow2') //turn on glow
+      //switch which glow is showing
+      document.getElementById(id).classList.toggle('glow1')
+      document.getElementById(id).classList.toggle('glow2')
       if (j < 6){
         getSound()
       }
     }
     else if (document.getElementById(id).classList.contains('red')){
         redSound.play()
-        document.getElementById(id).classList.toggle('glow1') //turn on glow
-        document.getElementById(id).classList.toggle('glow2') //turn on glow
+        //switch which glow is showing
+        document.getElementById(id).classList.toggle('glow1')
+        document.getElementById(id).classList.toggle('glow2')
         if (j < 6){
           getSound()
         }
       } else if (j < 6){
-      document.getElementById(id).classList.toggle('glow1')  //turn on glow
-      document.getElementById(id).classList.toggle('glow2')  //turn on glow
+        //switch which glow is showing
+      document.getElementById(id).classList.toggle('glow1')
+      document.getElementById(id).classList.toggle('glow2')
       getSound()
     }
 
