@@ -41,9 +41,14 @@
   text-indent: -9999px;
 }
 
-.glow {
+.glow1 {
   border-width: 2px;
   border-color: orange;
+}
+
+.glow2 {
+  border-width: 2px;
+  border-color: violet;
 }
 
 .invis {
