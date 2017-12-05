@@ -4,7 +4,10 @@
   background-color: white;
   color: white;
 }*/
+body {
 
+  text-align: center;
+}
 .colorBox{
   width: 126px;
   height: 38px;
@@ -42,13 +45,13 @@
 }
 
 .glow1 {
-  border-width: 2px;
-  border-color: orange;
+  border-width: 4px;
+  border-color: #ffc458;
 }
 
 .glow2 {
-  border-width: 2px;
-  border-color: violet;
+  border-width: 4px;
+  border-color: #fbb2fb;
 }
 
 .invis {
