@@ -84,10 +84,12 @@ getSound()
 
 function getSound(){
   setTimeout (playSound, 2950) //allows for sounds to not overlap and play after one another
+
 }
 //have to make a psuedo loop because setTimout() does not block functionalitly, only delays the current thread. i.e. doesn't work in a for loop
 let j = 0;
 function playSound() {
+
 j++
 console.log(j)
   let blueSound = document.getElementsByTagName('audio')[0]
@@ -106,43 +108,52 @@ console.log(j)
 //play desired sounds for the color in each box
 else if(document.getElementById(id).classList.contains('grey')){
     greySound.play()
+    document.getElementById(id).classList.toggle('glow') //turn on glow
     if (j < 6){
       getSound()
     }
   }
   else if (document.getElementById(id).classList.contains('blue')){
     blueSound.play()
+    document.getElementById(id).classList.toggle('glow') //turn on glow
     if (j < 6){
       getSound()
     }
   }
   else if (document.getElementById(id).classList.contains('green')){
       greenSound.play()
+      document.getElementById(id).classList.toggle('glow') //turn on glow
       if (j < 6){
         getSound()
       }
   }
   else if (document.getElementById(id).classList.contains('purple')){
    purpleSound.play()
+   document.getElementById(id).classList.toggle('glow') //turn on glow
     if (j < 6){
       getSound()
     }
   }
     else if (document.getElementById(id).classList.contains('yellow')){
       yellowSound.play()
+      document.getElementById(id).classList.toggle('glow') //turn on glow
       if (j < 6){
         getSound()
       }
     }
     else if (document.getElementById(id).classList.contains('red')){
         redSound.play()
+        document.getElementById(id).classList.toggle('glow') //turn on glow
         if (j < 6){
           getSound()
         }
       } else if (j < 6){
+      document.getElementById(id).classList.toggle('glow')  //turn on glow
       getSound()
     }
+
 }
+
 
 //make the image dance
 function dance(e){

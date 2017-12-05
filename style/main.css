@@ -41,6 +41,11 @@
   text-indent: -9999px;
 }
 
+.glow {
+  border-width: 2px;
+  border-color: orange;
+}
+
 .invis {
   display: none
 }
