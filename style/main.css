@@ -66,3 +66,31 @@ box-shadow: 2px 3px 20px #5454d6b8;
   background-color: #7bce7b;
   box-shadow: 2px 3px 20px #5454d6b8;
 }
+
+/*style background boxes*/
+.background-box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  position:absolute;
+}
+
+#top-left {
+  top: 0;
+  left: 0;
+}
+
+#top-right {
+  top: 0;
+  right: 0;
+}
+
+#bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+#bottom-right {
+  bottom: 0;
+  right: 0;
+}
