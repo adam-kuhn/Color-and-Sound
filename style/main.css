@@ -5,10 +5,10 @@
   color: white;
 }*/
 body {
-
   text-align: center;
 }
-.colorBox{
+
+.button{
   width: 126px;
   height: 38px;
   border-radius: 30px;
@@ -58,9 +58,7 @@ box-shadow: 2px 3px 20px #5454d6b8;
 }
 
 #play {
-  width: 136px;
-  height: 38px;
-  border-width: 4px;
   border-color: #1f3e1f;
-  background-color: #2bce2b;
+  background-color: #7bce7b;
+  box-shadow: 2px 3px 20px #5454d6b8;
 }
