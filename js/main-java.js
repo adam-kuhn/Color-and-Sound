@@ -74,9 +74,13 @@ function click(e) {
 function playMe(){
 
 //makes the character dance every 1/4 second for 24 seconds
-for (var i=0; i<24000; i+=250){
+for (i=0; i<24000; i+=250){
   setTimeout(dance, i) //timeout used to delay the switch of the image
+
   }
+  for (h=0; h<96000; h+=250){
+  setTimeout(disco, h/4)
+}
 getSound()
 }
 
@@ -177,8 +181,11 @@ function dance(e){
   let show = document.getElementById('show')
   invis.classList.toggle('invis')
   show.classList.toggle('invis')
+}
 
   //switch background box colors
+function disco(){
+
   document.getElementById("top-left").classList.toggle("blueish")//change top left color
     document.getElementById("top-right").classList.toggle("boxYellow") //change top right color
 
@@ -187,7 +194,4 @@ function dance(e){
 
     document.getElementById("bottom-right").classList.toggle("blueish")// need to turn off bottom right color before changing to "soft-purple" because of class ordering in css
     document.getElementById("bottom-right").classList.toggle("soft-purple")
-
-
-
 }
