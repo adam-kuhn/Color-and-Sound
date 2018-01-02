@@ -172,8 +172,22 @@ else if(document.getElementById(id).classList.contains('grey')){
 
 //make the image dance
 function dance(e){
+  //switch the images
   let invis = document.getElementById('invis')
   let show = document.getElementById('show')
   invis.classList.toggle('invis')
   show.classList.toggle('invis')
+
+  //switch background box colors
+  document.getElementById("top-left").classList.toggle("blueish")//change top left color
+    document.getElementById("top-right").classList.toggle("boxYellow") //change top right color
+
+    document.getElementById("bottom-left").classList.toggle("boxYellow")// need to turn off bottom left color before changing to "teal" because of class ordering in css
+    document.getElementById("bottom-left").classList.toggle("teal")
+
+    document.getElementById("bottom-right").classList.toggle("blueish")// need to turn off bottom right color before changing to "soft-purple" because of class ordering in css
+    document.getElementById("bottom-right").classList.toggle("soft-purple")
+
+
+
 }
