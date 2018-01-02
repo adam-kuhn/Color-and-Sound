@@ -35,41 +35,41 @@ h3 {
 }
 
 .grey {
-  background-color: #6b6868;
+  background-color: #dcd1d1;
   text-indent: -9999px;
 }
 
 .blue {
-  background-color: #3e3effdb;
+  background-color: #4f4fe2db;
   text-indent: -9999px;
 }
 
 .green {
-  background-color: #43c743;
+  background-color: #7bdc7b;
   text-indent: -9999px;
 }
 
 .yellow {
-  background-color: #f1f13a;
+  background-color: #d8cc5f;
   text-indent: -9999px;
 }
 
 .red {
-  background-color: #e21313;
+  background-color: #ff7171;
   text-indent: -9999px;
 }
 
 .purple {
-  background-color: #d00dd0;
+  background-color: #e696e6;
   text-indent: -9999px;
 }
 
 .glow1 {
-box-shadow: 1.5px 1px 0px 1.5px #6d6dccb8;
+box-shadow: 1.5px 1px 0px 1px #6d6dccb8;
 }
 
 .glow2 {
-  box-shadow: 1.5px 1px 0px 1.5px #ec1b1b;
+  box-shadow: 1.5px 1px 0px 1px ##a96972;
 }
 
 .invis {
