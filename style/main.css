@@ -8,12 +8,30 @@ body {
   text-align: center;
 }
 
+
+h3 {
+  color: #f74a4a;
+  text-shadow: 2px 3px #6f5151;
+  font-weight: bold;
+}
+
+ h1 {
+    color: #36ff16fc;
+    text-shadow: 2px 3px #6f5151;
+    font-weight: bolder;
+    font-size: 7rem;
+
+}
+
+
+
 .colorBox{
   width: 126px;
   height: 38px;
   border-radius: 30px;
   box-shadow: 2px 3px blue;
   border: 0.5px;
+  background-color: #fff4f4; /*soft pink/white */
 }
 
 .grey {
