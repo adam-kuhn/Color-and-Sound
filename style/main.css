@@ -96,23 +96,35 @@ z-index: -1;
 #top-left {
   top: 0;
   left: 0;
-  background-color: #ddaff3; /*soft purple*/
 }
 
 #top-right {
   top: 0;
   right: 0;
-  background-color: #a1ecc8bf; /*teal*/
 }
 
 #bottom-left {
   bottom: 0;
   left: 0;
-  background-color: #ffeb3b; /*yellow*/
 }
 
 #bottom-right {
   bottom: 0;
   right: 0;
+}
+
+.soft-purple {
+  background-color: #ddaff3; /*soft purple*/
+}
+
+.teal {
+  background-color: #a1ecc8bf; /*teal*/
+}
+
+.boxYellow{
+  background-color: #ffeb3b; /*yellow*/
+}
+
+.blueish{
   background-color: #00bcd4; /*blueish*/
 }
